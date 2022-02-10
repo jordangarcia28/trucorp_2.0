@@ -24,6 +24,9 @@
 
 		$sql = "SELECT id, nama, alamat, jabatan FROM users";
 		$result = $conn->query($sql);
+		
+		$users = $result>num_rows;
+		echo "Jumlah user: ".$users."<br>";
 
 		if ($result->num_rows > 0) {
 		    echo "<table><tr><th>ID</th><th>Name</th><th>Alamat</th><th>Jabatan</th></tr>";
